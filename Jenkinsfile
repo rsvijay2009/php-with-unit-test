@@ -2,17 +2,22 @@ pipeline {
 	agent any
 	options { buildDiscarder(logRotator(numToKeepStr: '5')) }
 	stages {
-		stage('Step 1') {
+		stage('First Step') {
 		  steps {
-		   	echo "This is first step in Jenkins pipeline"
+			echo "Pipeline is started"
 		  }
 		}
-		stage('Unit test') {
+		stage('Install') {
 		  steps {
-		   	sh 'make test'
+			sh 'make install'
 		  }
 		}
-		stage('Step 3') {
+		stage('Testing') {
+		  steps {
+			sh 'make test'
+		  }
+		}
+		stage('Final Step') {
 		  steps {
 		   	echo "Pipeline is completed successfully!!!"
 		  }

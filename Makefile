@@ -10,6 +10,10 @@ explain:
 
 
 
+# Installation ( I just did for Jenkins pipline otherwise I will get an error while run the make test
+# stage in jenkins pipline)
+install: ## Install the composer and npm for jenkins pipline
+	composer.phar install
 
 # Testing
 test: ## Run all php tests
