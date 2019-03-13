@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('First Step') {
 		  steps {
-			echo "Pipeline is started"
+			echo "Pipeline process is started"
 		  }
 		}
 		stage('Install') {
