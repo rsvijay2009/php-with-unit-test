@@ -17,6 +17,11 @@ pipeline {
 			sh 'make test'
 		  }
 		}
+		stage('Create a Text file') {
+		  steps {
+		   	sh 'mkdir TestPipline.txt'
+		  }
+		}
 		stage('Final Step') {
 		  steps {
 		   	echo "Pipeline is completed successfully!!!"
