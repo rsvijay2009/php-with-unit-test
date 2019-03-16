@@ -1,0 +1,11 @@
+<ruleset name="PHP Code Sniffer">
+    <description>The coding standard for the project</description>
+
+    <arg name="extensions" value="php"/>
+    <arg value="sp"/>
+
+    <file>src</file>
+
+    <!-- Include the whole PSR2 standard -->
+    <rule ref="PSR2"></rule>
+</ruleset>

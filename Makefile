@@ -17,4 +17,11 @@ install: ## Install the composer and npm for jenkins pipline
 
 # Testing
 test: ## Run all php tests
-	./vendor/bin/phpunit
+	./vendor/bin/phpunit --testsuite "FIRST_TRY" --verbose
+
+test-cov: ## Run all php test coverage
+	./vendor/bin/phpunit --testsuite "FIRST_TRY" --coverage-html=./build/coverage/ --log-junit=./build/logs/junit.xml
+
+# Code Inspection
+checkstyle-cov: ## Run checkstyle, with coverage
+	./vendor/bin/phpcs
