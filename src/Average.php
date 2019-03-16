@@ -1,6 +1,6 @@
 <?php
 
-namespace drmonkeyninja;
+namespace myapp;
 
 class Average
 {
@@ -23,7 +23,7 @@ class Average
     {
         sort($numbers);
         $size = count($numbers);
-
+       
         if ($size % 2) {
             return $numbers[$size / 2];
         } else {
