@@ -2,30 +2,28 @@ pipeline {
 	agent any
 	options { buildDiscarder(logRotator(numToKeepStr: '5')) }
 	stages {
-		stage('First Step') {
-		  steps {
-			echo "Pipeline process is started"
-		  }
-		}
-		stage('Install') {
+		stage('Build') {
 		  steps {
 			sh 'make install'
 		  }
 		}
-		stage('Testing') {
-		  steps {
-			sh 'make test'
-		  }
+		stage('Test') {
+	      steps {
+	        parallel(
+	          "Test Coverage": {
+	            sh 'make test-cov'
+	          }
+	        )
+	      }
 		}
-		stage('Create a Text file') {
-		  steps {
-		   	sh 'mkdir TestPipline.txt'
-		  }
-		}
-		stage('Final Step') {
-		  steps {
-		   	echo "Pipeline is completed successfully!!!"
-		  }
+		stage('Analyse') {
+	      steps {
+	        parallel(
+	          "Checkstyle": {
+	            sh 'make checkstyle-cov'
+	          }
+	        )
+	      }
 		}
 	}
 }
