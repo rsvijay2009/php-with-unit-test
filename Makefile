@@ -24,4 +24,4 @@ test-cov: ## Run all php test coverage
 
 # Code Inspection
 checkstyle-cov: ## Run checkstyle, with coverage
-	./vendor/bin/
+	./vendor/bin/phpcs
