@@ -1,16 +1,9 @@
 #!/usr/bin/python
-#
-# CLI script to find "is jenkins upto date?"
-#
-
-
-
 def get_jenkins_latest_release_version():
    return "Yes"
 
 def get_current_installed_jenkins_version():
     return "Yes"
-
 
 def main():
     # Get Jenkins Latest version
