@@ -4,7 +4,7 @@ from datetime import *
 
 def get_release_info():
     now = datetime.now()
-    get_release_date = now + timedelta(days=7)
+    get_release_date = now + timedelta(days=5)
     format_release_date = '{0.day}/{0.month}/{0.year}'.format(get_release_date)
 
     split_date = format_release_date.split("/")
@@ -22,8 +22,8 @@ def get_release_info():
             if expected_release_date == release_date_from_csv:
                 print("@%s Have you prepared the below things for the upcoming release on %s ? \n\n"
                       "1. Create release branch in GitHub \n\n"
-                      "2. Create Change Request in HSD Portal \n\n"
-                      "3. Post the release content in workplace"
+                      "2. Create Change Request in HSD Portal (https://hsd.emishealth.com)\n\n"
+                      "3. Post the release content in workplace (https://emisgroup.facebook.com/groups/1135207973188630)"
                       % (name, date)
                       )
                 break
