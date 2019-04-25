@@ -20,10 +20,10 @@ def get_release_info():
             release_date_from_csv = datetime(int(split_csv_date[2]), int(split_csv_date[1]), int(split_csv_date[0]))
 
             if expected_release_date == release_date_from_csv:
-                print("@%s Have you prepared the below things for the upcoming release on %s ? \n\n"
+                print("```@%s Have you prepared the below things for the upcoming release on %s ? \n\n"
                       "1. Create release branch in GitHub \n\n"
                       "2. Create Change Request in HSD Portal (https://hsd.emishealth.com)\n\n"
-                      "3. Post the release content in workplace (https://emisgroup.facebook.com/groups/1135207973188630)\n"
+                      "3. Post the release content in workplace (https://emisgroup.facebook.com/groups/1135207973188630)```"
                       % (name, date)
                       )
                 break
