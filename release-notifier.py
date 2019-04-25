@@ -6,8 +6,6 @@ def get_release_info():
     now = datetime.now()
     get_release_date = now + timedelta(days=5)
     format_release_date = '{0.day}/{0.month}/{0.year}'.format(get_release_date)
-    print(now)
-    print(get_release_date)
 
     split_date = format_release_date.split("/")
     expected_release_date = datetime(int(split_date[2]), int(split_date[1]), int(split_date[0]))
