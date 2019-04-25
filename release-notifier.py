@@ -6,6 +6,8 @@ def get_release_info():
     now = datetime.now()
     get_release_date = now + timedelta(days=5)
     format_release_date = '{0.day}/{0.month}/{0.year}'.format(get_release_date)
+    print(now)
+    print(get_release_date)
 
     split_date = format_release_date.split("/")
     expected_release_date = datetime(int(split_date[2]), int(split_date[1]), int(split_date[0]))
@@ -23,7 +25,7 @@ def get_release_info():
                 print("@%s Have you prepared the below things for the upcoming release on %s ? \n\n"
                       "1. Create release branch in GitHub \n\n"
                       "2. Create Change Request in HSD Portal (https://hsd.emishealth.com)\n\n"
-                      "3. Post the release content in workplace (https://emisgroup.facebook.com/groups/1135207973188630)"
+                      "3. Post the release content in workplace (https://emisgroup.facebook.com/groups/1135207973188630)\n"
                       % (name, date)
                       )
                 break
