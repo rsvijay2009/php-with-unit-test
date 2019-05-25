@@ -3,4 +3,4 @@
 3. And at the end, the GitHub plugin:
 	- adds an inline comment for each new issue,
 	- adds a global comment with a summary of the analysis,
-	- and updates the status of the pull request, setting it to “failed” if at least one new critical or blocker issue was found.
+	- and updates the status of the pull request, setting it to “failed” if at least one new critical or blocker issue 
