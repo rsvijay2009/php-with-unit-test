@@ -28,7 +28,7 @@ pipeline {
 		stage("Build & SonarQube analysis") {
            steps {
               withSonarQubeEnv('SonarQube') {
-                sh 'mvn clean package sonar:sonar'
+                sh '/Applications/SonarScanner/bin/sonar-scanner'
               }
             }
           }
