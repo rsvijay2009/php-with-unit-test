@@ -25,18 +25,19 @@ pipeline {
 	        )
 	      }
 		}
-		stage('Sonarqube Analysis') {
-		    steps {
-		    	script {
-          			scannerHome = tool 'SonarQubeScanner'
-        		}
-		        withSonarQubeEnv('sonarqube') {
-		            sh "${scannerHome}/bin/sonar-scanner"
-		        }
-		        timeout(time: 10, unit: 'MINUTES') {
-		            waitForQualityGate abortPipeline: true
-		        }
-		    }
-		}
+		stage("Build & SonarQube analysis") {
+           steps {
+              withSonarQubeEnv('My SonarQube Server') {
+                sh 'mvn clean package sonar:sonar'
+              }
+            }
+          }
+          stage("Quality Gate") {
+            steps {
+              timeout(time: 1, unit: 'HOURS') {
+                waitForQualityGate abortPipeline: true
+              }
+            }
+          }
 	}
 }
