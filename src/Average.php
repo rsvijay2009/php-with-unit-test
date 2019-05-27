@@ -2,6 +2,9 @@
 
 namespace myapp;
 
+// This is a class file to handle Average
+// This is a class file to handle Average
+// This is a class file to handle Average
 class Average
 {
     /**
