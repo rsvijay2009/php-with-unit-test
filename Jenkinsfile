@@ -14,7 +14,7 @@ pipeline {
 	            sh 'make test-cov'
 	          },
 	          "Cobertura Test Coverage": {
-        		cobertura coberturaReportFile: 'reports/coverage.xml'
+                cobertura coberturaReportFile: 'reports/newreport.xml'
       		  }
 	        )
 	      }
