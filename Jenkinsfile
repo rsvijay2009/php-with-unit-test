@@ -12,7 +12,10 @@ pipeline {
 	        parallel(
 	          "Test Coverage": {
 	            sh 'make test-cov'
-	          }
+	          },
+	          "Cobertura Test Coverage": {
+        		cobertura coberturaReportFile: 'reports/coverage.xml'
+      		  }
 	        )
 	      }
 		}
