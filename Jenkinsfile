@@ -28,19 +28,5 @@ pipeline {
 	        )
 	      }
 		}
-		stage("Build & SonarQube analysis") {
-           steps {
-              withSonarQubeEnv('SonarQube') {
-                sh '/Applications/SonarScanner/bin/sonar-scanner'
-              }
-            }
-          }
-          stage("Quality Gate") {
-            steps {
-              timeout(time: 1, unit: 'HOURS') {
-                waitForQualityGate abortPipeline: true
-              }
-            }
-          }
 	}
 }
