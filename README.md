@@ -1,3 +1,4 @@
-# php-with-unit-test
-A sample php project with php unit test
-Test commit to check Jenkins job
+# PHP project with CI
+- This is a simple project implemented in PHP along with PHPUnit
+
+- Jenkins is integrated with this project
