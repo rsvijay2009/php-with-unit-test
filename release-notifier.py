@@ -22,8 +22,8 @@ def get_release_info():
             if expected_release_date == release_date_from_csv:
                 print("```@%s Have you prepared the below things for the upcoming release on %s ? \n\n"
                       "1. Create release branch in GitHub \n\n"
-                      "2. Create Change Request in HSD Portal (https://hsd.emishealth.com)\n\n"
-                      "3. Post the release content in workplace (https://emisgroup.facebook.com/groups/1135207973188630)```"
+                      "2. Create Change Request in HSD Portal \n\n"
+                      "3. Post the release content in workplace```"
                       % (name, date)
                       )
                 break
